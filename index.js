@@ -1,7 +1,7 @@
 const app = require('express')();
 const http = require('http').Server(app);
 const io = require("socket.io-client");
-const socket = io("https://servicenotifications.tbsharedaccount.repl.co/");
+const socket = io("https://servnotifs.pcprojects.tk/");
 const fs = require("fs");
 var users = require("./users.json") || {};
 var codes = [];
