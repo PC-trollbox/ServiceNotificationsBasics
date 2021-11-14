@@ -47,6 +47,9 @@ app.post("/registerStep1", function(req, res) {
 		var randomcode = "R" + Math.floor(Math.random() * 99) + "I";
 		codes.push(randomcode);
 		socket.emit("messageUser", req.body.id, "Basics", "The first verification code is " + randomcode + ", type it in the registration form.", "REG");
+		socket.once("errorSend", function() {
+			return res.sendFile(__dirname + "/loginFail.html");
+		});
 		res.send(text2);
 	});
 });
@@ -73,6 +76,9 @@ app.post("/loginStep1", function(req, res) {
 		var randomcode = Math.floor(Math.random() * 9999);
 		codes.push(randomcode);
 		socket.emit("messageUser", users[req.body.username].twofaCode, "Basics", "The 2FA code is " + randomcode + ", type it in the login form.", "2FA");
+		socket.once("errorSend", function() {
+			return res.sendFile(__dirname + "/loginFail.html");
+		});
 		res.send(text2);
 	});
 });
