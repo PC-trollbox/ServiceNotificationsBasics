@@ -1,0 +1,2 @@
+npm install express socket.io-client body-parser cookie-parser
+npm start

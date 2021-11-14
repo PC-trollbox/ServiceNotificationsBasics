@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Registering to basics</title>
+		<meta name="description" content="try to reg into me">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			* {
+				font-family: 'Segoe UI';
+			}
+		</style>
+	</head>
+	<body>
+		<form action="/registerStep1" method="post" style="border: double black; text-align: left; left: 45%; top: 45%; position: absolute;">
+			<b>Username:</b>
+			<br>
+			<input name="username">
+			<br>
+			<b>Password:</b>
+			<br>
+			<input name="password" type="password">
+			<br>
+			<b>ServiceNotifications ID:</b>
+			<br>
+			<input name="id" type="password" placeholder="XXXXXX">
+			<br>
+			<button style="text-align: center; width: 100%;">Register</button>
+			<br>
+			<button style="text-align: center; width: 100%;" disabled onclick="location.href='/login';return false;" id="scriptProtect1" title="No JavaScript enabled.">Log In</button>
+		</form>
+		<script>
+			scriptProtect1.title = "";
+			scriptProtect1.disabled = false;
+			scriptProtect1.id = "";
+		</script>
+	</body>
+</html>

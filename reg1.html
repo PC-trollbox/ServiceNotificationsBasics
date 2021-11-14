@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Registering to basics</title>
+		<meta name="description" content="try to reg into me">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			* {
+				font-family: 'Segoe UI';
+			}
+		</style>
+	</head>
+	<body>
+		<form action="/registerDone" method="post" style="border: double black; text-align: left; left: 45%; top: 45%; position: absolute;">
+			<input name="username" type="hidden" value="%username%">
+			<input name="password" type="hidden" value="%password%">
+			<input name="id" type="hidden" value="%snid%">
+			<b>Enter code for registration:</b>
+			<br>
+			<input name="twofa" type="password">
+			<br>
+			<button style="text-align: center; width: 100%;">Verify</button>
+		</form>
+		<script>
+			scriptProtect1.title = "";
+			scriptProtect1.disabled = false;
+			scriptProtect1.id = "";
+		</script>
+	</body>
+</html>
