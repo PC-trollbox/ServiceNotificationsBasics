@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Logging into basics</title>
+		<meta name="description" content="try to log into me">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			* {
+				font-family: 'Segoe UI';
+			}
+		</style>
+	</head>
+	<body>
+		<form action="/" style="border: double black; text-align: left; left: 45%; top: 45%; position: absolute;">
+			<b>Something vent wrong!</b>
+			<br>
+			Your ServiceNotifications is offline. Please re-enable to continue.
+			<br>
+			<button style="text-align: center; width: 100%;" disabled onclick="location.reload();" id="scriptProtect1" title="No JavaScript enabled.">Retry</button>
+			<br>
+			<button style="text-align: center; width: 100%;" disabled onclick="location.href='/register';return false;" id="scriptProtect1" title="No JavaScript enabled.">Register</button>
+		</form>
+		<script>
+			scriptProtect1.title = "";
+			scriptProtect1.disabled = false;
+			scriptProtect1.id = "";
+		</script>
+	</body>
+</html>
