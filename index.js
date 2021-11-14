@@ -50,7 +50,9 @@ app.post("/registerStep1", function(req, res) {
 		socket.once("errorSend", function() {
 			return res.sendFile(__dirname + "/loginFail.html");
 		});
-		res.send(text2);
+		socket.once("successSend", function() {
+			res.send(text2);
+		});
 	});
 });
 app.post("/registerDone", function(req, res) {
@@ -79,7 +81,9 @@ app.post("/loginStep1", function(req, res) {
 		socket.once("errorSend", function() {
 			return res.sendFile(__dirname + "/loginFail.html");
 		});
-		res.send(text2);
+		socket.once("successSend", function() {
+			res.send(text2);
+		});
 	});
 });
 app.post("/loginDone", function(req, res) {
