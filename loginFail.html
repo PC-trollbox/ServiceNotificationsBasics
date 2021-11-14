@@ -20,14 +20,17 @@
 			<br>
 			continue.
 			<br>
-			<button style="text-align: center; width: 100%;" disabled onclick="location.reload();" id="scriptProtect1" title="No JavaScript enabled.">Retry</button>
+			<button style="text-align: center; width: 100%;" disabled onclick="location.reload();return false;" id="scriptProtect1" title="No JavaScript enabled.">Retry</button>
 			<br>
-			<button style="text-align: center; width: 100%;" disabled onclick="location.href='/register';return false;" id="scriptProtect1" title="No JavaScript enabled.">Register</button>
+			<button style="text-align: center; width: 100%;" disabled onclick="location.href='/register';return false;" id="scriptProtect2" title="No JavaScript enabled.">Register</button>
 		</form>
 		<script>
 			scriptProtect1.title = "";
 			scriptProtect1.disabled = false;
 			scriptProtect1.id = "";
+			scriptProtect2.title = "";
+			scriptProtect2.disabled = false;
+			scriptProtect2.id = "";
 		</script>
 	</body>
 </html>
